@@ -140,7 +140,7 @@ jobs:
         python gds2obj.py tinytapeout.gds
         python -m pip install -r render/requirements.txt
         cp *.obj render/
-        (cd render && python render_tinytapeout.py)
+        (cd render && python render_tinytapeout.py -spp 64)
 
     - name: populate render cache
       uses: actions/cache@v2
